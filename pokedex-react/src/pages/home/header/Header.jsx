@@ -3,9 +3,11 @@ import * as FaIcons from 'react-icons/fa'
 import css from '../header/header.module.scss'
 import logo from '../../../assets/pokemon.png'
 
-export default function Header(obtenerSearch) {
+export default function Header({obtenerSearch}) {
 
-
+    const retornarSearch = (busqueda) => {
+        obtenerSearch(busqueda)
+    }
 
   return (
     <nav className={css.header}>
@@ -14,13 +16,12 @@ export default function Header(obtenerSearch) {
                 <img src={logo} alt="logo" />
             </div>
             <div className={css.div_search}>
-              <div>
-                <FaIcons.FaSearch />
-              </div>
-                <input 
-                type="search" 
-                onChange={(e) => obtenerSearch(e.target.value)} 
+                <input
+                    placeholder="Busqueda"
+                    type="search"
+                    onChange={(e) => retornarSearch(e.target.value)}
                 />
+                <FaIcons.FaSearch className={css.search_icon} /> {/* Icono dentro del input */}
             </div>
         </div>
     </nav>
