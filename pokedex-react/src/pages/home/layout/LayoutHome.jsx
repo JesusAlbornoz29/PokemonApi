@@ -48,7 +48,7 @@ const filterPokemon = search?.length > 0
 : arrayPokemon
 
 
-const obtenerSearch = (e) => {
+const obtenerSearchLocal = (e) => {
   console.log(e)
   const texto = e.toLowerCase()
   setSearch(texto)
@@ -59,7 +59,7 @@ const obtenerSearch = (e) => {
 
   return (
     <div className={css.layout}>
-        <Header obtenerSearch={obtenerSearch} />
+        <Header obtenerSearch={obtenerSearchLocal} />
 
         <section className={css.section_pagination}>
           <div className={css.div_pagination}>
