@@ -1,7 +1,7 @@
 import React from 'react'
 import * as FaIcons from 'react-icons/fa'
 import css from '../header/header.module.scss'
-import logo from '../../../assets/pokemon.png'
+
 
 export default function Header({obtenerSearch}) {
 
@@ -13,7 +13,7 @@ export default function Header({obtenerSearch}) {
     <nav className={css.header}>
         <div className={css.div_header}>
             <div className={css.div_logo}>
-                <img src={logo} alt="logo" />
+                <img src="/src/assets/pokemon.png" alt="logo" />
             </div>
             <div className={css.div_search}>
                 <input

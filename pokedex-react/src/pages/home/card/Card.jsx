@@ -9,6 +9,9 @@ export default function Card({card}) {
   const [evoluciones, setEvoluciones] = useState([])
 
 
+  console.log(evoluciones)
+
+
     useEffect(() => {
        const dataPokemon = async () => {
         const api = await axios.get(`${URL_POKEMON}/${card.name}`);
@@ -50,14 +53,8 @@ export default function Card({card}) {
         const arrayEoluciones = []
         const URL = especiePokemon?.url_especie?.url.split("/"); 
         const api = await axios.get(`${URL_EVOLUCIONES}/${URL[6]}`)
-
         const URL2 = api?.data?.chain?.species?.url?.split("/")
-
-
-
         const img1 = await getPokemonImagen(URL2[6]) 
-
-
         arrayEoluciones.push({
           img: img1,
           name: api?.data?.chain?.species?.name,
@@ -69,18 +66,18 @@ export default function Card({card}) {
           const img2 = await getPokemonImagen(ID[6])
           arrayEoluciones.push({
             img: img2,
-            name: DATA2?.name
+            name: DATA2?.name,
           })
 
-
           if(api?.data?.chain.evolves_to[0].evolves_to[0].length !== 0){
-            const DATA3 = api?.data?.chain?.evolves_to[0]?.evolves_to[0]?.species
+            const DATA3 = 
+              api?.data?.chain?.evolves_to[0]?.evolves_to[0]?.species;
             const ID = DATA3?.url?.split("/")
             const img3 = await getPokemonImagen(ID[6])
             
             arrayEoluciones.push({
               img: img3,
-              name: DATA3?.name
+              name: DATA3?.name,
             })
           }
         }
@@ -96,11 +93,6 @@ export default function Card({card}) {
  }, [especiePokemon])
 
 
-
-
-
-
-  console.log(itemPokemon);
 
 
   let pokeId = itemPokemon?.id?.toString()
