@@ -13,7 +13,7 @@ export default function Header({obtenerSearch}) {
     <nav className={css.header}>
         <div className={css.div_header}>
             <div className={css.div_logo}>
-                <img src="/src/assets/pokemon.png" alt="logo" />
+                <img src="./src/assets/pokemon.png" alt="logo" />
             </div>
             <div className={css.div_search}>
                 <input
