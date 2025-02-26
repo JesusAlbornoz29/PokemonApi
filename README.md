@@ -1,8 +1,16 @@
-# React + Vite
+# PokemonApi
+REACT, SASS , JS, YARN, VITE, AXIOS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+yarn dev para correr la aplicacion 
 
-Currently, two official plugins are available:
+Usa `$ yarn dev` para correr la aplicacion 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Si tienes docker compose instalado solo tienes que ejecutar 
+
+`$ docker compose build`
+
+`$ docker compose up -d`
+
+Y listo! tendras el contenedor corriendo, solo tendras que ingresar a:
+
+http://localhost:8080
