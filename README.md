@@ -1,8 +1,9 @@
 # PokemonApi
 REACT, SASS , JS, YARN, VITE, AXIOS
 
-
-Usa `$ yarn dev` para correr la aplicacion 
+Yarn
+Usa `$ yarn ` para crar los modulos 
+y `$ yarn dev` para correr la aplicacion 
 
 Si tienes docker compose instalado solo tienes que ejecutar 
 
